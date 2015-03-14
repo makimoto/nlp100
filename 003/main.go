@@ -1,9 +1,10 @@
 package main
 
 import (
-	"fmt"
 	"regexp"
 	"strings"
+
+	"github.com/k0kubun/pp"
 )
 
 func main() {
@@ -17,5 +18,5 @@ func main() {
 		output = append(output, len(v))
 	}
 
-	fmt.Println(output)
+	pp.Print(output)
 }
