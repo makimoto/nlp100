@@ -5,14 +5,11 @@ import (
 	"fmt"
 	"os"
 	"strconv"
-
-	"github.com/k0kubun/pp"
 )
 
 func main() {
 
 	args := os.Args[1:]
-	pp.Println(args)
 	if len(args) == 0 {
 		help()
 	} else if len(args) == 1 {
