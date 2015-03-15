@@ -12,6 +12,7 @@ func main() {
 	if len(os.Args[1:]) > 0 {
 		for _, fname := range os.Args[1:] {
 			fp, _ := os.Open(fname)
+			defer fp.Close()
 			replaceTab(fp)
 		}
 	} else {
