@@ -13,16 +13,16 @@ func main() {
 	if len(args) == 0 {
 		help()
 	} else if len(args) == 1 {
-		n, err := strconv.Atoi(os.Args[1])
+		n, err := strconv.Atoi(args[0])
 		errCheck(err)
 		split(os.Stdin, "stdin", n)
 	} else {
-		n, err := strconv.Atoi(os.Args[1])
+		n, err := strconv.Atoi(args[0])
 		errCheck(err)
-		fp, err := os.Open(os.Args[2])
+		fp, err := os.Open(args[1])
 		errCheck(err)
 		defer fp.Close()
-		split(fp, os.Args[2], n)
+		split(fp, args[1], n)
 	}
 }
 
